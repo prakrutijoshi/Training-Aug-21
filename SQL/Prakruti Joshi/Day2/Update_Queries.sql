@@ -23,8 +23,11 @@ WHERE DepartmentID=80 AND CommissionPct<0.20
 --update5
 UPDATE Employees  
 SET Email = 'not available'    
-WHERE Departments.DepartmentName ='Accounting'
+WHERE DepartmentID = 
+( SELECT DepartmentID FROM Departments
+WHERE DepartmentName = 'Accounting')
 
+SELECT * FROM Employees
 --update6 
 UPDATE Employees
 SET Salary=8000
