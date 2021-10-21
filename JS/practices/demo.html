@@ -1,0 +1,32 @@
+<html>
+        <head>
+            <title>
+                First Html 
+            </title>
+             <script type = 'text/javascript'>
+                function disp()
+                {
+                    var value = document.getElementById("input1").value;
+                    if(isNaN(value))
+                    {
+                        modifier=' not ';
+                    }
+                    else
+                    {
+                        modifier='';
+                    }
+                    var result = "You entered ' " + value +" ' : this is" +modifier+ " a valid number.";
+                    alert(result);
+                }
+            </script>
+         </head>
+        <body>
+            <h1> Demo </h1>
+            <p> This is a paragraph</p>
+            <form name="demo">
+                <input type="text" id="input1"></input>
+                <button type="button" onclick=disp();> Click me </button>
+            </form>
+            
+        </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            Compute Element;
+        </title>
+        <script type="text/javascript">
+
+        function check()
+        {
+            var value = document.getElementById("price1").value;
+            var paragraph_list = document.getElementsByTagName("p");
+            var firstpara = paragraph_list[0];
+            if(value >= 80)
+            {
+                display = "block";
+            }
+            else
+            {
+                display = "none";
+            }
+            firstpara.style.display = display;
+        }
+
+        function total()
+        {
+            var value = document.getElementById("price1").value;
+            if(isNaN(value))
+            {
+                total="indeterminate";
+            }
+            else
+            {
+                total = 1.08 * value;
+                total = total.toFixed(2);
+            }
+            var total_slot = document.getElementById("total");
+            total_slot.innerHTML=total;
+        }
+
+        </script>
+    </head>
+    <body>  
+        <h1>Compute Element</h1>
+        <form>
+            Enter a price: 
+            <input type='number' id="price1" min='1' max='100'
+                oninput="check(); total();" >
+            </input>
+            The total price, including tax, is <span id="total">indeterminate</span>
+
+            <p style="display: none;"> Warning </p>
+
+        </form>
+
+    </body>
+</html>
