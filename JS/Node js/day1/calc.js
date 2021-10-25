@@ -6,44 +6,44 @@ function calc(op,n1,n2)
     {
         case '+':
             res=parseInt(n1)+parseInt(n2);
-            fs.writeFile('result.txt',res.toString(),function(err){
+            fs.writeFile('result.txt','Addition: ' +res.toString(),function(err){
                 if(err) return console.log(err);
                 fs.readFile('result.txt','utf8',function(err,data){
                     if(err) return console.log(err);
-                    console.log("Addition is ",data)
+                    console.log(data)
                 })
             })
             break;
 
         case '-':
             res=parseInt(n1)-parseInt(n2);
-            fs.writeFile('result.txt',res.toString(),function(err){
+            fs.writeFile('result.txt','Substraction: '+res.toString(),function(err){
                 if(err) return console.log(err);
                 fs.readFile('result.txt','utf8',function(err,data){
                     if(err) return console.log(err);
-                    console.log("Addition is ",data)
+                    console.log(data)
                 })
             })
             break;
 
         case '*':
             res=parseInt(n1)*parseInt(n2);
-            fs.writeFile('result.txt',res.toString(),function(err){
+            fs.writeFile('result.txt','Multiplication: '+res.toString(),function(err){
                 if(err) return console.log(err);
                 fs.readFile('result.txt','utf8',function(err,data){
                     if(err) return console.log(err);
-                    console.log("Addition is ",data)
+                    console.log(data)
                 })
             })
             break;
 
         case '/':
             res=parseInt(n1)/parseInt(n2);
-            fs.writeFile('result.txt',res.toString(),function(err){
+            fs.writeFile('result.txt','Division: '+res.toString(),function(err){
                 if(err) return console.log(err);
                 fs.readFile('result.txt','utf8',function(err,data){
                     if(err) return console.log(err);
-                    console.log("Addition is ",data)
+                    console.log(data)
                 })
             })
             break;
